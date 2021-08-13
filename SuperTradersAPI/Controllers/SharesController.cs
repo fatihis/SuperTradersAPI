@@ -31,13 +31,7 @@ namespace SuperTradersAPI.Controllers
             CRUDOperations context = HttpContext.RequestServices.GetService(typeof(CRUDOperations)) as CRUDOperations;
             return StatusCode(context.SellShare(user.userId,shareSymbol,amount));
         }
-        //lets user sell shares.
-        //[HttpPost("/sellShares/{shareSymbol}")]
-        //public Share sellShares(string shareSymbol, User user, int amount, Share s)
-        //{
-        //    CRUDOperations context = HttpContext.RequestServices.GetService(typeof(CRUDOperations)) as CRUDOperations;
-        //    return context.AddShare(s);
-        //}
+       
         [HttpPost("/addShare/")]
         public IActionResult addShare(Share share)
         {
